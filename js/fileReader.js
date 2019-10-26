@@ -1,13 +1,14 @@
-function readFile() {
+var readFile = function() {
+    const fs = require('fs');
+    const readline = require('readline');
 
     //Fájl(ok) beolvasása
-    const readline = require('readline'), fs = require('fs'), fileReader = readline.createInterface({
-        //input: fs.createReadStream('../files/data.txt'), //Tényleges data
-        input: fs.createReadStream("../files/dataTest.txt"), //Test data
+
+    const fileReader = readline.createInterface({
+        input: fs.createReadStream('../files/data.txt'),
         output: process.stdout,
         console: false
     });
-
     //Sorok feldarabolása
     fileReader.on('line', function (line) {
         var dataLine = line.split("$$$");
@@ -22,6 +23,3 @@ function readFile() {
         console.log(article);
     });
 }
-
-//readFile();
-
