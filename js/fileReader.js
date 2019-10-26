@@ -1,11 +1,15 @@
-var readFile = function() {
+var list = [];
+
+var readFile =  function(filePath) {
     const fs = require('fs');
     const readline = require('readline');
+
+
 
     //Fájl(ok) beolvasása
 
     const fileReader = readline.createInterface({
-        input: fs.createReadStream('../files/data.txt'),
+        input: fs.createReadStream(filePath),
         output: process.stdout,
         console: false
     });
@@ -20,6 +24,13 @@ var readFile = function() {
             'alsoRecommandedLabels': dataLine[1],
             'text': dataLine[4]
         };
-        console.log(article);
+        list.push(article);
+        console.log(list.length);
     });
+    console.log(list.length);
+
 }
+
+exports.readFile = readFile;
+
+//readFile();

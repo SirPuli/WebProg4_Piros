@@ -1,6 +1,6 @@
 var http = require('http');
 var fs = require('fs');
-var readFile = require('./js/fileReader');
+var readFile = require('./js/fileReader.js');
 
 //create a server object:
 http.createServer(function (req, res) {
@@ -9,8 +9,8 @@ http.createServer(function (req, res) {
     if (oldal == '/') {
         fs.readFile('./views/index.html', function(err, tartalom){
             res.write(tartalom);
+            readFile.readFile("./files/data.txt");
             res.end();
-            readFile();
         });
     } else if (oldal == '/rolunk') {
         res.write('RÓLUNK');

@@ -2,11 +2,10 @@
      <head>
          <title>Page Title</title>
          <meta charset="utf-8"/>
-         <script>
-
+         <script src="../js/fileReader.js">
+             let fileReader = readFile("./files/data.txt");
          </script>
      </head>
-
 
      <body>
 
@@ -14,7 +13,7 @@
             <h1 id="id1">This is a Heading</h1>
             <p>This is a paragraph.</p>
         </div>
-        <button onclick="readFile()">Read</button>
+        <button onclick="fileReader">Read</button>
 
      </body>
 </html> 
