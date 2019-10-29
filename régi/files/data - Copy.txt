@@ -1,9 +1,0 @@
-__label__mobiltelefon 0.952584 __label__elektronikai@@ipar 0.782673 __label__távközlés 0.0827073 __label__értékpapírpiac 0.0737063 __label__részvény 0.0120638 __label__mikroelektronika 0.00691384 __label__telefon 0.00574025 __label__foglalkoztatás 0.00556492 __label__fotóipar 0.00491541 __label__szórakoztató@@elektronika 0.00461957 
-$$$
-__label__geography__kanada 0.817585 __label__mobiltelefon 0.787941 __label__értékpapírpiac 0.562187 __label__részvény 0.191943 __label__elektronikai@@ipar 0.160276 __label__távközlés 0.0420977 __label__organization__blackberry 0.0302246 __label__organization__research@@in@@motion 0.0203424 __label__geography__usa 0.0149671 __label__szállodaipar 0.0113418 
-$$$ 
-__label__elektronikai@@ipar __label__értékpapírpiac __label__mobiltelefon __label__részvény geography__kanada organization__research@@in@@motion genre__hír year__2011 
-$$$ 
-Research in Motion 
-$$$ 
-24 dollár alá – két és fél éves mélypontjára – is benézett a Research in Motion (RIM) árfolyama a múlt héten. Borzolta a befektetők idegeit, hogy a BlackBerry okostelefon gyártójának második negyedévi bevétele 15 százalékkal elmaradt az előző negyedévitől. Még drasztikusabban – 1,46-ról 0,63 dollárra – esett vissza a cég egy részvényre jutó eredménye. Pozitívum ugyanakkor, hogy a társaság szabadalmakba fektetett pénzösszegének mértéke 22 százalékkal nőtt, miközben felvásárolta a Nortel 778 millió dollárra értékelt szellemi vagyonát, amivel tovább erősítheti alkalmazásainak fejlesztését. Bár az Equilor Befektetési Zrt. szerint a RIM az androidos készülékekkel és az iPhone okostelefonjaival a közeljövőben sem tud lépést tartani, a szabadalmakba és fejlesztésekbe fektetett összegek arra késztethetik versenytársait, hogy a jelenlegi alulértékelt szinten felvásárlási ajánlatot tegyenek a RIM-részvényekre. Ez pedig a kisbefektetőknek is vonzó sztorit jelenthet.

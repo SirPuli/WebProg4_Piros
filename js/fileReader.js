@@ -1,6 +1,6 @@
 var list = [];
 
-var fileReader =  function(filePath) {
+var readFile =  function(filePath) {
     const fs = require('fs');
     const readline = require('readline');
 
@@ -25,12 +25,10 @@ var fileReader =  function(filePath) {
             'text': dataLine[4]
         };
         list.push(article);
-        console.log(list.length);
     });
     console.log(list.length);
+};
 
-}
-
-exports.readFile = fileReader;
+exports.readFile = readFile;
 
 //readFile();

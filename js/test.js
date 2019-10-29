@@ -1,5 +1,5 @@
 //
-var readFile = require("fileReader.js")
+var readFile = require("./fileReader")
 function testStuff() {
     readFile("./files/data.txt");
 }
