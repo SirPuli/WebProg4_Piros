@@ -1,6 +1,9 @@
 var http = require('http'),
     fs = require('fs');
     fileReader = require('./js/fileReader');
+var min = 10,
+    max = min + 20;
+
 
 
 fs.readFile('./views/index.html', function (err, html) {
@@ -12,8 +15,9 @@ fs.readFile('./views/index.html', function (err, html) {
 
         response.write(html);
 
-        fileReader.readFile('./files/data.txt');
-
+        console.log(fileReader.huszas(fileReader.readFile('./files/data.txt'),min, max));
+        fileReader.clearList();
         response.end();
     }).listen(8000);
 });
+

@@ -1,5 +1,4 @@
-var list = [];
-var twentylist = [];
+var list = {};
 
 var readFile =  function(filePath) {
     const fs = require('fs');
@@ -25,27 +24,25 @@ var readFile =  function(filePath) {
             'alsoRecommandedLabels': dataLine[1],
             'text': dataLine[4]
         };
-        list.push(article);
+        list.add(article);
     });
     /*
     list.forEach(function (element) {
         console.log(element);
     });
     */
-   // console.log(list[20]);
     console.log('A lista hossza: ' + list.length);
     return list;
 };
 
 var huszas = function (lista, min, max) {
     for(var i = min; i < max;i++){
-       twentylist.push(lista[i]);
-    };
-    return twentylist;
+        console.log(lista[i]);
+    }
 };
 
 var clearList = function(){
-    list = [];
+    list = {};
     console.log('Lista törölve! Hossz: ' + list.length);
 };
 
