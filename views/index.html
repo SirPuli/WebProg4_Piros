@@ -1,19 +1,103 @@
- <!DOCTYPE html>
-     <head>
-         <title>Page Title</title>
-         <meta charset="utf-8"/>
-         <script src="../js/fileReader.js">
-             let fileReader = readFile("./files/data.txt");
-         </script>
-     </head>
+<!DOCTYPE html>
+<head>
+    <title>Page Title</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/navbar.js"></script>
+    <script src="../js/fileReader.js">
+        let fileReader = readFile("./files/data.txt");
+    </script>
+    <script src="../js/functions.js"></script>
+</head>
 
-     <body>
-
-        <div >
-            <h1 id="id1">This is a Heading</h1>
-            <p>This is a paragraph.</p>
-        </div>
-        <button onclick="fileReader">Read</button>
-
-     </body>
+<body>
+   <header>
+       <div id="mySidenav" class="sidenav">
+           <a href="#">Modellek</a>
+           <a href="#">Hetilap</a>
+           <a href="#">Online</a>
+           <a href="#">Demó</a>
+           <a href="#">Címkéző</a>
+           <a href="#">Tanító</a>
+           <button class="btn btn-primary navbtn-close bottom-left" id="closeButton" type="button" onclick="closeNav()"> << </button>
+       </div>
+       <button class="btn btn-secondary navbtn-open bottom-left" id="openButton" type="button" onclick="openNav()"> >> </button>
+   </header>
+   <div class="container" id="main" >
+       <h1 id="id1">címkeajánló-Hetilap</h1>
+       <p>Cikkek listája:</p>
+       <select class="form-control form-control-sm">
+          <option></option>
+       </select>
+       <div>
+           <form class="slidecontainer">
+               <p>Value: <output id="demo">0.5</output></p>
+               <input type="range" min="0" max="1" value="0.5" step="0.1" class="slider" id="myRange" oninput="demo.value = myRange.value">                 
+           </form>
+       </div>
+       <div class="row">
+           <div class="col-sm-6">
+               <div class="card">
+                   <div class="card-header">
+                       Cikk szövege                     
+                   </div>
+                   <div class="card-body">
+                       <blockquote class="blockquote mb-0">
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                       </blockquote>
+                   </div>
+               </div>
+           </div>
+           <div class="col-sm-6">
+               <div class="card-group">
+                   <div class="card">
+                       <div class="card-header">
+                           Eredeti címkék                
+                       </div>
+                       <div class="card-body">
+                           <blockquote class="blockquote mb-0">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                           </blockquote>
+                       </div>
+                   </div>
+                   <div class="card">
+                       <div class="card-header">
+                           Ajánlott címkék                     
+                       </div>
+                       <div class="card-body">
+                           <blockquote class="blockquote mb-0">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                           </blockquote>
+                       </div>
+                   </div>
+               </div>
+               <div class="card-group">
+                   <div class="card">
+                       <div class="card-header">
+                               Eredeti címkék(egyéb)                    
+                       </div>
+                       <div class="card-body">
+                           <blockquote class="blockquote mb-0">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                           </blockquote>
+                       </div>
+                   </div>
+                   <div class="card">
+                       <div class="card-header">
+                               Ajánlott címkék(egyéb)                     
+                       </div>
+                       <div class="card-body">
+                           <blockquote class="blockquote mb-0">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                           </blockquote>
+                       </div>
+                   </div>
+               </div>
+           </div>               
+       </div>
+   </div>
+</body>
 </html> 
