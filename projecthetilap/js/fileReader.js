@@ -1,6 +1,6 @@
 var list = [];
 
-var readFile =  function(filePath) {
+var fileReader =  function(filePath) {
     const fs = require('fs');
     const readline = require('readline');
 
@@ -31,6 +31,6 @@ var readFile =  function(filePath) {
 
 }
 
-exports.readFile = readFile;
+exports.readFile = fileReader;
 
 //readFile();

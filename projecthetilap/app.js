@@ -1,15 +1,17 @@
 var http = require('http');
 var fs = require('fs');
-var readFile = require('./js/fileReader.js');
+//var sajatmodul = require('./ezasajatmodulom.js');
 
 //create a server object:
 http.createServer(function (req, res) {
-    console.log("haha: " + req.url);
-    oldal = req.url;
+    //console.log("haha: " + req.url);
+    let oldal = req.url;
     if (oldal == '/') {
-        fs.readFile('./views/index.html', function(err, tartalom){
+        //sajatmodul.ezegyfuggveny()
+        //sajatmodul.ezamasikfuggveny();
+
+        fs.readFile('index.html', function(err, tartalom){
             res.write(tartalom);
-            readFile.readFile("./files/data.txt");
             res.end();
         });
     } else if (oldal == '/rolunk') {

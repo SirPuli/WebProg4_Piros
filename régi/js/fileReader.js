@@ -25,9 +25,8 @@ var readFile =  function(filePath) {
             'text': dataLine[4]
         };
         list.push(article);
-        console.log(list.length);
+        console.log(article);
     });
-    console.log(list.length);
 
 }
 
