@@ -1,0 +1,22 @@
+{
+  "name": "projecthetilap",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Puli96/WebProg4_Piros.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Puli96/WebProg4_Piros/issues"
+  },
+  "homepage": "https://github.com/Puli96/WebProg4_Piros#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

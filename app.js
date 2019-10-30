@@ -1,20 +1,20 @@
-var http = require('http'),
-    fs = require('fs');
-    fileReader = require('./js/fileReader');
-var min = 10,
-    max = min + 20;
+const express = require('express');
+const app = express();
+const path = require('path');
+const router = express.Router();
 
+app.use('/css', express.static('css'));
+app.use('/js', express.static('js'));
 
-
-fs.readFile('./views/index.html', function (err, html) {
-    if (err) {
-        throw err;
-    }
-    http.createServer(function(request, response) {
-        response.writeHeader(200, {"Content-Type": "text/html"});
-
-        response.write(html);
-        response.end();
-    }).listen(8000);
+router.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/views/index.html'));
+  //__dirname : It will resolve to your project folder.
 });
 
+
+
+//add the router
+app.use('/', router);
+app.listen(process.env.port || 8000);
+
+console.log('Running at Port 8000');
