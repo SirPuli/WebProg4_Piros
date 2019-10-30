@@ -14,9 +14,6 @@ fs.readFile('./views/index.html', function (err, html) {
         response.writeHeader(200, {"Content-Type": "text/html"});
 
         response.write(html);
-
-        console.log(fileReader.huszas(fileReader.readFile('./files/data.txt'),min, max));
-        fileReader.clearList();
         response.end();
     }).listen(8000);
 });

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Page Title</title>
+    <title>WebProg4_Piros</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/bootstrap-grid.css">
@@ -11,9 +11,40 @@
         let fileReader = readFile("./files/data.txt");
     </script>
     <script src="../js/functions.js"></script>
+    <script>
+        var min = 0,
+            max = min + 20;
+
+        var hely = document.getElementById("cikklista");
+
+        var cikkLista = fileReader.huszas(fileReader.readFile('./files/data.txt'), min, max);
+
+        function printCikkLista() {
+            console.log("áááááááááááááááááááááááááááááááááá")
+            for (var i = min; i < max; i++){
+                console.log(cikkLista[i]);
+                var option = document.createElement("option");
+                option.text = cikkLista[i].title;
+                hely.add(option);
+            };
+        }
+
+        var rendered = function(){
+            document.getElementById("slider").oninput = function() {
+                changeSliderValue()
+            };
+        }
+
+        function changeSliderValue() {
+            var val = document.getElementById("slider").value //gets the oninput value
+            document.getElementById('sliderValue').innerHTML = val //displays this value to the html page
+            console.log(val)
+        }
+
+    </script>
 </head>
 
-<body>
+<body onload="printCikkLista();">
    <header>
        <div id="mySidenav" class="sidenav">
            <a href="#">Modellek</a>
@@ -29,13 +60,13 @@
    <div class="container" id="main" >
        <h1 id="id1">címkeajánló-Hetilap</h1>
        <p>Cikkek listája:</p>
-       <select class="form-control form-control-sm">
+       <select id="cikklista" class="form-control form-control-sm">
           <option></option>
        </select>
        <div>
            <form class="slidecontainer">
-               <p>Value: <output id="demo">0.5</output></p>
-               <input type="range" min="0" max="1" value="0.5" step="0.1" class="slider" id="myRange" oninput="demo.value = myRange.value">                 
+               <p>Value: <output id="sliderValue">0.5</output></p>
+               <input type="range" min="0" max="1" value="0.5" step="0.1" class="slider" id="sliderS" oninput="sliderValue.value = sliderS.value">
            </form>
        </div>
        <div class="row">

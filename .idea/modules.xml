@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/WebProg4_Piros.iml" filepath="$PROJECT_DIR$/.idea/WebProg4_Piros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Webprog4_FOSZ-master/.idea/Webprog4_FOSZ-master.iml" filepath="$PROJECT_DIR$/../Webprog4_FOSZ-master/.idea/Webprog4_FOSZ-master.iml" />
+    </modules>
+  </component>
+</project>
