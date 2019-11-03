@@ -7,13 +7,12 @@ var data = fs.readFileSync('./files/data.txt','utf8');
 
 var jsonStrig = '[';
 var items = data.split('$$$');
-for (var i = 0; i < items.length; i++) {  
-  var current = items[i].split('/n');
-  jsonStrig += '{"' + 'title' + '":"' + current[i+3] + '",' +
-    '"' + 'originalLabels' + '":"' + current[i+2] + '",'+
-    '"' + 'recommandedLabels'+ '":"' + current[i+0] + '",' +
-    '"' + 'alsoRecommandedLabels' + '":"' + current[i+1] + '",' + 
-    '"' + 'text' +  '":"' +  current[i+4] + '"},';
+for (var i = 0; i < items.length; i+=5) {
+  jsonStrig += '{"' + 'title' + '":"' + items[i+3] + '",' +
+    '"' + 'originalLabels' + '":"' + items[i+2] + '",'+
+    '"' + 'recommandedLabels'+ '":"' + items[i] + '",' +
+    '"' + 'alsoRecommandedLabels' + '":"' + items[i+1] + '",' + 
+    '"' + 'text' +  '":"' +  items[i+4] + '"},';
 }
 jsonStrig = jsonStrig.substr(0, jsonStrig.length - 1);
 jsonStrig += ']';
