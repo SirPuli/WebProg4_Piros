@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="../css/bootstrap-grid.css" type="text/css">
     <link rel="stylesheet" href="../css/bootstrap-reboot.css" type="text/css">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
-    <script src="../js/navbar.js"></script>
     <script src="../js/fileReader.js">
         let fileReader = readFile("./files/data.txt");
     </script>
@@ -60,8 +59,7 @@
    <div class="container" id="main" >
        <h1 id="id1">címkeajánló-Hetilap</h1>
        <p>Cikkek listája:</p>
-       <select id="cikklista" class="form-control form-control-sm">
-          <option></option>
+       <select id="cikklista" class="form-control form-control-sm" onload="renderHtml()">         
        </select>
        <div>
            <form class="slidecontainer">
@@ -130,5 +128,6 @@
            </div>               
        </div>
    </div>
+   <script src="/js/renderHtml.js"></script>
 </body>
 </html> 
