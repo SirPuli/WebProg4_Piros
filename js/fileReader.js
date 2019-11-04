@@ -40,7 +40,7 @@ var readFile =  function(filePath) {
 var huszas = function (lista, min, max) {
     for(var i = min; i < max;i++){
        twentylist.push(lista[i]);
-    };
+    }
     return twentylist;
 };
 
@@ -48,8 +48,4 @@ var clearList = function(){
     list = [];
     console.log('Lista törölve! Hossz: ' + list.length);
 };
-
-exports.readFile = readFile;
-exports.clearList = clearList;
-exports.huszas = huszas;
 //readFile();

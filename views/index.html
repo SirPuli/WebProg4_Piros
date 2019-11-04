@@ -6,40 +6,15 @@
     <link rel="stylesheet" href="../css/bootstrap-grid.css" type="text/css">
     <link rel="stylesheet" href="../css/bootstrap-reboot.css" type="text/css">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
-    <script src="../js/fileReader.js">
-        let fileReader = readFile("./files/data.txt");
-    </script>
-    <script src="../js/functions.js"></script>
+    <script src="../js/fileReader.js"/>
     <script>
-        var min = 0,
-            max = min + 20;
-
-        var hely = document.getElementById("cikklista");
-
-        var cikkLista = fileReader.huszas(fileReader.readFile('./files/data.txt'), min, max);
-
         function printCikkLista() {
-            console.log("áááááááááááááááááááááááááááááááááá")
-            for (var i = min; i < max; i++){
-                console.log(cikkLista[i]);
-                var option = document.createElement("option");
-                option.text = cikkLista[i].title;
-                hely.add(option);
-            };
+            var cikkek = readFile("./files/data.txt");
+            var x = document.getElementById("mySelect");
+            var option = document.createElement("option");
+            option.text = "Kiwi";
+            x.add(option);
         }
-
-        var rendered = function(){
-            document.getElementById("slider").oninput = function() {
-                changeSliderValue()
-            };
-        }
-
-        function changeSliderValue() {
-            var val = document.getElementById("slider").value //gets the oninput value
-            document.getElementById('sliderValue').innerHTML = val //displays this value to the html page
-            console.log(val)
-        }
-
     </script>
 </head>
 
@@ -59,7 +34,8 @@
    <div class="container" id="main" >
        <h1 id="id1">címkeajánló-Hetilap</h1>
        <p>Cikkek listája:</p>
-       <select id="cikklista" class="form-control form-control-sm" onload="renderHtml()">         
+       <select id="cikklista" class="form-control form-control-sm">
+          <option></option>
        </select>
        <div>
            <form class="slidecontainer">
@@ -84,7 +60,7 @@
                <div class="card-group">
                    <div class="card">
                        <div class="card-header">
-                           Eredeti címkék                
+                           Eredeti címkék
                        </div>
                        <div class="card-body">
                            <blockquote class="blockquote mb-0">
@@ -128,6 +104,5 @@
            </div>               
        </div>
    </div>
-   <script src="/js/renderHtml.js"></script>
 </body>
 </html> 
