@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <title>WebProg4_Piros</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css" type="text/css">
+    <link rel="stylesheet" href="./css/bootstrap-reboot.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    
+</head>
+
+<body>
+   <header>
+       <div id="mySidenav" class="sidenav">
+           <a href="#">Modellek</a>
+           <a href="#">Hetilap</a>
+           <a href="#">Online</a>
+           <a href="#">Demó</a>
+           <a href="#">Címkéző</a>
+           <a href="#">Tanító</a>
+           <button class="btn btn-primary navbtn-close bottom-left" id="closeButton" type="button" onclick="closeNav()"> << </button>
+       </div>
+       <button class="btn btn-secondary navbtn-open bottom-left" id="openButton" type="button" onclick="openNav()"> >> </button>
+   </header>
+   <div class="container" id="main" >
+       <h1 id="id1">címkeajánló-Hetilap</h1>
+       <p>Cikkek listája:</p>
+       <select id="cikkLista" class="form-control form-control-sm" onchange="cikkListaOnchange(this.value)">
+          
+       </select>
+       <div>
+           <form class="slidecontainer">
+               <p>Value: <output id="sliderValue">0.5</output></p>
+               <input type="range" min="0" max="1" value="0.5" step="0.1" class="slider" id="sliderS" oninput="sliderValue.value = sliderS.value">
+           </form>
+       </div>
+       <div class="row">
+           <div class="col-sm-6">
+               <div class="card">
+                   <div class="card-header" >
+                       Cikk szövege                     
+                   </div>
+                   <div class="card-body">
+                       <blockquote class="blockquote mb-0" id="cikk">
+                       </blockquote>
+                   </div>
+               </div>
+           </div>
+           <div class="col-sm-6">
+               <div class="card-group">
+                   <div class="card">
+                       <div class="card-header">
+                           Eredeti címkék
+                       </div>
+                       <div class="card-body" id ="originalLabel">
+                           <blockquote class="blockquote mb-0">
+                               
+                           </blockquote>
+                       </div>
+                   </div>
+                   <div class="card">
+                       <div class="card-header" id ="recommendedLabel">
+                           Ajánlott címkék                     
+                       </div>
+                       <div class="card-body">
+                           <blockquote class="blockquote mb-0">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                           </blockquote>
+                       </div>
+                   </div>
+               </div>
+               <div class="card-group">
+                   <div class="card">
+                       <div class="card-header">
+                               Eredeti címkék(egyéb)                    
+                       </div>
+                       <div class="card-body">
+                           <blockquote class="blockquote mb-0">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                           </blockquote>
+                       </div>
+                   </div>
+                   <div class="card">
+                       <div class="card-header" >
+                               Ajánlott címkék(egyéb)                     
+                       </div>
+                       <div class="card-body">
+                           <blockquote class="blockquote mb-0" id="specialRecommendedLabel">
+                           </blockquote>
+                       </div>
+                   </div>
+               </div>
+           </div>               
+       </div>
+   </div>
+   <script src = "./js/data.js"></script>
+   <script src="./js/functions.js"></script>
+</body>
+</html> 
