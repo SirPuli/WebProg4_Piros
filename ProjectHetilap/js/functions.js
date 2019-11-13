@@ -19,6 +19,11 @@ function closeNav() {
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
  // Display the default slider value
+ output.innerHTML = slider.value;
+
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
 
 // Update the current slider value (each time you drag the slider handle)
 
@@ -26,8 +31,11 @@ var output = document.getElementById("demo");
 
 var cikkLista = document.getElementById('cikkLista');
 var cikk = document.getElementById('cikk');
-var originalLabel = document.getElementById('originalLabel');
-var specialRecommendedLabel = document.getElementById('specialRecommendedLabel')
+var originalLabels = document.getElementById('originalLabels');
+var alsoOriginalLabels = document.getElementById('alsoOriginalLabels');
+var specialRecommendedLabels = document.getElementById('specialRecommendedLabels');
+var recommendedLabels = document.getElementById('recommendedLabels');
+
 var item=[];
 var dataLine = data.split('/**/');
 
@@ -50,23 +58,37 @@ for (let i = 0; i < dataLine.length; i++) {
 cikkLista.onchange();
 function cikkListaOnchange(n) {
     cikk.innerHTML = item[n]['text'];
-    var list = item[n]['originalLabels'].split(' ');
+    var origLabel = item[n]['originalLabels'].split(' ');
     
-    //originalLabel.innerHTML = item[n]['originalLabels'].replace(/@@/g, ' ').replace('__label__', ' ').split(' ');
-    
-    countR = 0;
-    list.forEach(element => {
-        if (element.includes("__label__")) {
-            originalLabel.innerHTML = element.replace(/@@/g, ' ').replace('__label__', ' ') + '<br>';
-            countR++;
-        } else if (element.includes("geography__") || element.includes("organization__") || element.includes("person__")) {
-            specialRecommendedLabel.innerHTML = element.replace(/@@/g, ' ') + '<br>';
-        }
-    });
-    
+    originalLabels.innerHTML=null;
+    alsoOriginalLabels.innerHTML=null;
 
-    rangeOnchange();
+    origLabel.forEach(element => {
+        if (element.includes("__label__")) {
+            originalLabels.innerHTML += element.replace(/@@/g, ' ').replace('__label__', ' ') + '<br>';
+            
+        } else if (element.includes("geography__") || element.includes("organization__") || element.includes("person__")) {
+            alsoOriginalLabels.innerHTML += element.replace(/@@/g, ' ') + '<br>';
+        }
+
+        
+    }); 
+
+    var recLabel = item[cikkLista.value]['recommendedLabels'].split('__label__');
+    recommendedLabels.innerHTML = null;
+
+    recLabel.forEach(element => {
+            recommendedLabels.innerHTML += element.replace(/@@/g, ' ') + '<br>';
+    });
+
+    var specRecLabel = item[cikkLista.value]['specialRecommendedLabels'].split('__label__');
+    specialRecommendedLabels.innerHTML = null;
+
+    specRecLabel.forEach(element => {
+            specialRecommendedLabels.innerHTML += element.replace(/@@/g, ' ')+ '<br>';
+    });
 }
+
 /*
 function readTextFile(file)
 {
@@ -96,7 +118,7 @@ function readTextFile(file)
                 console.log(jsonStrig);
                 obj = JSON.parse(jsonStrig);
                 return obj;
-                *
+                
             }
         }
     }
