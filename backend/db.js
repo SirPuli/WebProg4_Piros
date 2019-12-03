@@ -1,3 +1,5 @@
 module.exports = {
-    DB: 'mongodb://localhost:27017/auth'
+    //kommentezzétek ki ha a sajátotokat akarjátok használni teszetléshez
+    DB: 'mongodb+srv://gergo:SAEexmVn9RLdfdl4fhS9@cluster0-ofwnx.azure.mongodb.net/test?retryWrites=true&w=majority'
+
 }
