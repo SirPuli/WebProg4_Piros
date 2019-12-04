@@ -35,12 +35,12 @@ class Register extends Component {
     render() {
         return(
             <div className="container" style={{ marginTop: '50px', width: '700px'}}>
-                <h2 style={{marginBottom: '40px'}}>Registration</h2>
+                <h2 style={{marginBottom: '40px'}}>Regisztráció</h2>
                 <form onSubmit={ this.handleSubmit }>
                     <div className="form-group">
                         <input
                             type="text"
-                            placeholder="Name"
+                            placeholder="Név"
                             className="form-control"
                             name="name"
                             onChange={ this.handleInputChange }
@@ -60,7 +60,7 @@ class Register extends Component {
                     <div className="form-group">
                         <input
                             type="password"
-                            placeholder="Password"
+                            placeholder="Jelszó"
                             className="form-control"
                             name="password"
                             onChange={ this.handleInputChange }
@@ -70,7 +70,7 @@ class Register extends Component {
                     <div className="form-group">
                         <input
                             type="password"
-                            placeholder="Confirm Password"
+                            placeholder="Jelszó megerősítése"
                             className="form-control"
                             name="password_confirm"
                             onChange={ this.handleInputChange }
@@ -79,7 +79,7 @@ class Register extends Component {
                     </div>
                     <div className="form-group">
                         <button type="submit" className="btn btn-primary">
-                            Register User
+                            Regosztrálás
                         </button>
                     </div>
                 </form>

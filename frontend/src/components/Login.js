@@ -31,7 +31,7 @@ class Login extends Component {
     render() {
         return(
             <div className="container" style={{ marginTop: '50px', width: '700px'}}>
-                <h2 style={{marginBottom: '40px'}}>Login</h2>
+                <h2 style={{marginBottom: '40px'}}>Bejelentkezés</h2>
                 <form onSubmit={ this.handleSubmit }>
                     <div className="form-group">
                         <input
@@ -46,7 +46,7 @@ class Login extends Component {
                     <div className="form-group">
                         <input
                             type="password"
-                            placeholder="Password"
+                            placeholder="Jelszó"
                             className="form-control"
                             name="password"
                             onChange={ this.handleInputChange }
@@ -55,7 +55,7 @@ class Login extends Component {
                     </div>
                     <div className="form-group">
                         <button type="submit" className="btn btn-primary">
-                            Login User
+                            Bejelentkezés
                         </button>
                     </div>
                 </form>

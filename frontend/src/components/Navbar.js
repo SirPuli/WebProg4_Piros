@@ -5,17 +5,17 @@ class Navbar extends Component {
     render() {
         return(
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <Link className="navbar-brand" to="/">Redux Node Auth</Link>
+                <Link className="navbar-brand" to="/">WebProg3_Piros</Link>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/register">Sign Up</Link>
+                            <Link className="nav-link" to="/register">Regisztráció</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/login">Sign Up</Link>
+                            <Link className="nav-link" to="/login">Bejelentkezés</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">Home</Link>
+                            <Link className="nav-link" to="/">Fő oldal</Link>
                         </li>
                     </ul>
                 </div>
